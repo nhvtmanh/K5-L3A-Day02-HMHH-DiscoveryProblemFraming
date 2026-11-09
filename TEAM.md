@@ -148,3 +148,25 @@ Tham gia tranh luận, phản biện và đóng góp ý kiến cho các phần C
 - Tầm quan trọng của số liệu thực tế: khi viết Problem Statement v0, tôi nhận ra nếu baseline thời gian chỉ là tự ước lượng thì bản báo cáo cực kỳ yếu. Việc phỏng vấn (Mom Test) và bấm giờ thực tế là bắt buộc chứ không phải làm cho có.
 - Kỹ năng làm việc nhóm: Học được cách gạt bỏ cái tôi, dám bỏ đi ý tưởng mình đã cất công chuẩn bị để lựa chọn bài toán chung mang lại góc nhìn thuyết phục và khả thi nhất cho cả team.
 
+### NguyenHoangVanTienManh-2A202603717
+
+**Phần việc phụ trách:**
+
+- Đề xuất 3 Problem Card, tham gia phản biện vấn đề của các thành viên, phân tích và hoàn thiện Problem Statement v1, so sánh 4 mức No AI / Rule / Workflow / Agent, đề xuất Workflow và quyết định Not Yet do chưa đủ bằng chứng kiểm chứng.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Tổng hợp nội dung CP6
+
+- Đề xuất tiêu chí thử nghiệm: giảm thời gian xác định yêu cầu từ khoảng 15 phút xuống 5 phút, đồng thời kiểm tra số yêu cầu bắt buộc bị bỏ sót. Đây là mục tiêu đề xuất, chưa phải kết quả đã đo.
+
+- Tham gia xây dựng phần giải thích chuỗi problem → quy trình → metric → boundary → mức can thiệp AI → quyết định của nhóm.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- Nội dung CP6 trong group_report.md.
+
+**Điều mình học được từ phần nhóm:**
+
+- Cần hiểu và kiểm chứng vấn đề thực tế trước khi nghĩ đến giải pháp AI; xác định bottleneck và metric rõ ràng
+- ưu tiên giải pháp đơn giản, chỉ sử dụng AI khi chứng minh được giá trị bổ sung.
