@@ -200,20 +200,37 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Nghe 12 candidate, tôi nhận ra một pattern chung: mọi người đều khổ sở ở khâu đọc và tổng hợp thông tin rải rác. Các bài toán của tôi (#10, #11) lại quá thiên về dev frontend (xử lý API), khiến các bạn khó đồng cảm và khó kiểm chứng. Do đó, tôi thấy việc chốt chọn vấn đề "đọc tài liệu lab" là hoàn toàn hợp lý, vì đó là nỗi đau thật mà cả bốn anh em đều đang nếm trải, dễ dàng phỏng vấn và validate hơn.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có, rất rõ ở vòng phản biện. Mọi người liên tục hỏi nhau theo hướng giải pháp: "không cần AI được không", "ném hết file cho AI tổng hợp đi". Nhận ra nhóm đang đi quá nhanh, chúng tôi phải dừng lại để vẽ chi tiết quy trình 5 bước hiện tại (CP5). Khi research thấy các tool có sẵn như NotebookLM đã làm quá tốt việc tóm tắt, nhóm mới bẻ lái sang giải pháp tạo checklist có trích nguồn và gắn cờ mâu thuẫn để tạo sự khác biệt.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Tôi đã đổi ý. Ban đầu tôi bảo vệ bài toán làm API của mình, nhưng AI (vai PM) và các bạn trong nhóm đã phân tích sắc bén: những lỗi đó có thể chặn dứt điểm bằng rule cứng như linter hay type schema thay vì dùng "dao mổ trâu" AI. Khi thấy giải pháp của mình chưa đủ thuyết phục và bài toán của nhóm sát thực tế hơn, tôi vui vẻ gác lại candidate của mình.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Bất ngờ lớn nhất không đến từ người dùng (vì nhóm chưa phỏng vấn), mà từ chính số liệu nội bộ. Thứ nhất, ChatGPT và NotebookLM đã cover rất tốt khâu tóm tắt. Thứ hai, khi bóc tách quy trình, khâu "đọc" ngốn tới 60 phút, áp đảo khâu "đối chiếu" (15 phút) – khâu vốn được nhóm giả định là bottleneck. Điều này dội một gáo nước lạnh, chỉ ra giả thuyết của nhóm có thể đang sai và việc phỏng vấn thực tế (Mom Test) là bắt buộc.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là baseline thời gian (60–75 phút) chỉ dựa trên ước lượng cá nhân của hai thành viên nên rất yếu. Thứ hai là sự mâu thuẫn khi chọn bottleneck: bước đối chiếu khớp với định hướng giải pháp, nhưng bước đọc mới tốn thời gian nhất. Cuối cùng là làm sao diễn đạt được điểm khác biệt (checklist trích nguồn) mà không vô tình biến Problem Statement thành một bản mô tả tính năng sản phẩm.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Tôi sẽ ép nhóm đi phỏng vấn (Mom Test) và đo đạc thời gian trên bài lab thật ngay lập tức, thay vì dùng số liệu tự biên tự diễn. Về phản biện, tôi sẽ làm gắt hơn: yêu cầu nhóm làm rõ xem 60 phút đọc và 15 phút đối chiếu có bị tính trùng nhau không, và bắt chỉ đích danh những điểm yếu cụ thể của NotebookLM trước khi chốt hướng đi mới.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Sinh viên mất 60-75 phút để đọc, đối chiếu đề bài, rule, rubric. Quy trình 5 bước hiện tại xác định khâu đối chiếu là bottleneck giả thuyết. Metric kỳ vọng: Giảm thời gian xuống ≤ 30 phút/lab, 0 bỏ sót yêu cầu. Boundary: AI chỉ gom file, tạo checklist có nguồn, báo mâu thuẫn; con người bắt buộc tự kiểm chứng và làm bài.
+Mức can thiệp: Workflow (Rule gom file → AI lập checklist → Người duyệt).
+Quyết định của nhóm: Not Yet. Baseline hiện tại quá mỏng, chưa phỏng vấn user thực tế và các giả định chưa được kiểm chứng, nên bắt buộc phải lùi lại thu thập data thật trước khi chốt Go.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
 -
+
