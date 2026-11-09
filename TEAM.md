@@ -38,6 +38,23 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
 ### HoVaTen-MSSV
+  
+**Phần việc phụ trách:**
+
+-
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+-
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+-
+
+**Điều mình học được từ phần nhóm:**
+
+-
+
 ### LeGiaHung-2A202603706
 
 **Phần việc phụ trách:**
@@ -64,19 +81,3 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - Cùng là bài toán tổng hợp thông tin nhưng mỗi người có góc nhìn khác: có người chỉ thấy đó là phần mềm tổng hợp thông tin, có người lại thấy đó là công cụ giúp intern và người mới vào dễ tiếp cận nền tảng, doanh nghiệp và môi trường làm việc
 - Vấn đề thật không nằm ở số lượng tài liệu mà ở việc thông tin cần thiết nằm rải rác ở nhiều nơi; không phải cứ dùng AI là giải quyết được
-  
-**Phần việc phụ trách:**
-
--
-
-**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
-
--
-
-**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
-
--
-
-**Điều mình học được từ phần nhóm:**
-
--
