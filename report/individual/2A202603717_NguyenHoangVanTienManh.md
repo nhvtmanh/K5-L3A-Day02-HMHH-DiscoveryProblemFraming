@@ -18,20 +18,15 @@
 
 Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng hợp nhiều thông tin** · **Pain từ người khác**.
 
-|   # | Lăng kính                         | Job Story: Khi… tôi muốn… để…                                                                                                   | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
-| --: | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------ | --------------------------------------------------------- |
-|   1 | Lặp lại                           | Khi mỗi tối trước khi đi ngủ, tôi muốn biết ngày hôm nay đã làm được những gì, để chuẩn bị những việc cần làm vào sáng mai      |                    |                                                           |
-|   2 | Tốn thời gian                     | Khi AI Coding Agent gen code, tôi muốn biết AI đã làm những gì, để đảm bảo những thứ AI làm là đúng theo plan                   |                    |                                                           |
-|   3 | Cần đọc, tổng hợp nhiều thông tin | Khi bắt đầu làm bài Lab, tôi muốn biết rõ cần phải làm những bài nào, để có thể làm và nộp bài đầy đủ                           |                    |                                                           |
-|   4 | Pain từ người khác                | Khi vào đầu buổi sáng, tôi cần biết trong kho còn thiếu nguyên liệu gì, để có thể chuẩn bị đầy đủ nguyên liệu trước khi làm món |                    |                                                           |
-|   5 | Pain từ người khác                |                                                                                                                                 |                    |                                                           |
-|   6 |                                   |                                                                                                                                 |                    |                                                           |
-|   7 |                                   |                                                                                                                                 |                    |                                                           |
-|   8 |                                   |                                                                                                                                 |                    |                                                           |
+|   # | Lăng kính                         | Job Story: Khi… tôi muốn… để…                                                                                                   | Ai chịu ảnh hưởng?    | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng)                 |
+| --: | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------- |
+|   1 | Lặp lại                           | Khi mỗi tối trước khi đi ngủ, tôi muốn biết ngày hôm nay đã làm được những gì, để chuẩn bị những việc cần làm vào sáng mai      | Tôi                   | 15 phút mỗi tối                                                           |
+|   2 | Tốn thời gian                     | Khi AI Coding Agent generate code, tôi muốn biết AI đã làm những gì, để đảm bảo những thứ AI làm là đúng theo plan              | Lập trình viên        | Mất 15 - 30 phút tùy độ khó task                                          |
+|   3 | Cần đọc, tổng hợp nhiều thông tin | Khi bắt đầu làm bài Lab, tôi muốn biết rõ cần phải làm những bài nào, để có thể làm và nộp bài đầy đủ                           | Học viên AI20K        | Mất trung bình 1 tiếng để tự tổng hợp thông tin                           |
+|   4 | Pain từ người khác                | Khi vào đầu buổi sáng, tôi cần biết trong kho còn thiếu nguyên liệu gì, để có thể chuẩn bị đầy đủ nguyên liệu trước khi làm món | Người pha chế đồ uống | Mất khoảng 20 - 30 phút để lên danh sách nguyên vật liệu cần nhập         |
+|   5 | Pain từ người khác                | Khi vào cuối tháng, tôi cần biết mỗi nhân sự đã làm việc bao nhiêu tiếng, để có thể tính lương cho họ                           | Bộ phận nhân sự       | Mất 1 - 2 tiếng để lên danh sách, tổng hợp và kiểm tra lại nếu có sai sót |
 
-**Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
-
-- ***
+---
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
 
@@ -45,22 +40,45 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 ### Problem Card #1
 
-| Trường                                    | Nội dung                                                                                                                                 |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Job Story                                 | Khi bắt đầu làm bài Lab, tôi muốn biết rõ cần phải làm những bài nào, để có thể làm và nộp bài đầy đủ                                    |
-| Actor                                     | Học viên                                                                                                                                 |
-| Thời điểm / bối cảnh                      | Vào đầu buổi Lab                                                                                                                         |
-| Quy trình hiện tại (3–7 bước)             | 1. Clone repository về máy 2. Đọc README.md 3. Đọc RULES.md 4. Đọc CHECKPOINTS.md 5. Đọc RUBRIC.md 6. Đọc SUBMISSION.md                  |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2 - 6: khoảng 1 tiếng, có thể mất nhiều hơn khi bắt đầu làm vì phải đọc lại file cần thiết để check có làm đúng yêu cầu không       |
-| Impact (nếu không giải thì sao)           | Mất thời gian xác định nhiệm vụ, có thể bỏ sót checkpoint, yêu cầu chấm điểm hoặc file cần nộp, dẫn đến nộp bài thiếu hoặc sai quy định. |
-| Success metric (baseline → target)        | Tổng thời gian đọc hiểu từ 1 tiếng xuống dưới 30 phút                                                                                    |
-| Phương án không dùng AI                   | Có một file tổng hợp bao gồm hướng dẫn, checklist, tiêu chí hoàn thành và yêu cầu nộp bài                                                |
-| Giả thuyết về AI (nếu có)                 | AI đọc các file Lab và tự động trích xuất nhiệm vụ, checkpoint, rubric và yêu cầu nộp bài                                                |
-| Cảm nhận nhanh                            | Workflow                                                                                                                                 |
+| Trường                                    | Nội dung                                                                                                                                |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Job Story                                 | Khi bắt đầu làm bài Lab, tôi muốn biết rõ cần phải làm những bài nào, để có thể làm và nộp bài đầy đủ                                   |
+| Actor                                     | Học viên AI20K                                                                                                                          |
+| Thời điểm / bối cảnh                      | Vào đầu buổi Lab                                                                                                                        |
+| Quy trình hiện tại (3–7 bước)             | 1. Clone repository về máy 2. Đọc README.md 3. Đọc RULES.md 4. Đọc CHECKPOINTS.md 5. Đọc RUBRIC.md 6. Đọc SUBMISSION.md                 |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2 - 6: khoảng 1 tiếng, có thể mất nhiều hơn khi bắt đầu làm vì phải đọc lại file cần thiết để check có làm đúng yêu cầu không      |
+| Impact (nếu không giải thì sao)           | Mất thời gian xác định nhiệm vụ, có thể bỏ sót checkpoint, yêu cầu chấm điểm hoặc file cần nộp, dẫn đến nộp bài thiếu hoặc sai quy định |
+| Success metric (baseline → target)        | Tổng thời gian đọc hiểu từ 1 tiếng xuống dưới 30 phút                                                                                   |
+| Phương án không dùng AI                   | Có một file tổng hợp bao gồm hướng dẫn, checklist, tiêu chí hoàn thành và yêu cầu nộp bài                                               |
+| Giả thuyết về AI (nếu có)                 | AI đọc các file Lab và tự động trích xuất nhiệm vụ, checkpoint, rubric và yêu cầu nộp bài                                               |
+| Cảm nhận nhanh                            | Workflow                                                                                                                                |
 
 Quy trình nháp hiện tại:
 
 ```text
+
+HIỆN TẠI — ≥ 60 phút
+
+[1 Clone repository: 1']
+    ↓
+[2 Đọc README.md: 15']
+    ↓
+[3 Đọc RULES.md: 10']
+    ↓
+[4 Đọc CHECKPOINTS.md: 15']
+    ↓
+[5 Đọc RUBRIC.md: 10']
+    ↓
+[6 Đọc SUBMISSION.md: 10']
+    ↑
+    └── BOTTLENECK: Bước 2–6 (~60 phút)
+        Đọc, đối chiếu nhiều file để hiểu yêu cầu
+        và xác định đầy đủ nhiệm vụ cần làm.
+
+Trong lúc làm Lab:
+[Tra cứu lại file] → [Kiểm tra yêu cầu] → [Tiếp tục làm]
+         ↑
+         └── Có thể lặp lại nhiều lần
 
 ```
 
@@ -83,6 +101,28 @@ Quy trình nháp hiện tại:
 
 ```text
 
+HIỆN TẠI — >= 60 phút
+
+[1 Developer đưa yêu cầu + plan: 15']
+    ↓
+[2 AI generate/chỉnh sửa code: 5']
+    ↓
+[3 Đọc tóm tắt của AI: 5']
+    ↓
+[4 Kiểm tra Git diff:  10']
+    ↓
+[5 Đối chiếu code với plan: 20']
+    ↓
+[6 Chạy build/test: 5']
+    ↓
+[7 Chấp nhận hoặc yêu cầu AI sửa: 5']
+    │
+    └── Nếu chưa đạt → Quay lại bước 2
+
+BOTTLENECK: Bước 4–5 (15–30 phút)
+Phải đọc các thay đổi và tự xác minh
+AI có thực hiện đúng yêu cầu trong plan không
+
 ```
 
 ### Problem Card #3
@@ -104,19 +144,38 @@ Quy trình nháp hiện tại:
 
 ```text
 
+HIỆN TẠI — ~ 60 phút
+
+[1 Kiểm tra món dự kiến pha chế: 5']
+    ↓
+[2 Xác định nguyên liệu cần dùng: 5']
+    ↓
+[3 Kiểm tra tồn kho thực tế: 20']
+    ↓
+[4 So sánh tồn kho với nhu cầu: 10']
+    ↓
+[5 Ghi nguyên liệu thiếu + số lượng: 10']
+    ↓
+[6 Báo lại cho chủ quán: 5']
+
+BOTTLENECK: Bước 3–4 (20–30 phút)
+Phải kiểm tra từng nguyên liệu và tính toán
+thủ công số lượng còn thiếu
+
 ```
 
 ### Card muốn pitch nhất
 
-- Card số:
-- Vì sao:
-- Câu hỏi muốn nhóm phản biện:
+- Card số: 1
+- Vì sao: nhiều học viên cũng đang gặp tình trạng tương tự
+- Câu hỏi muốn nhóm phản biện: làm thế nào để giải quyết hiệu quả vấn đề mất thời gian trên?
 
 ### AI đã phản biện card thế nào
 
-| Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
-| ------------------ | ------- | --------- |
-|                    |         |           |
+| Điểm yếu AI chỉ ra                                                                               | Đồng ý?         | Đã sửa gì                                       |
+| ------------------------------------------------------------------------------------------------ | --------------- | ----------------------------------------------- |
+| Actor "Học viên" quá chung chung, chưa xác định nhóm học viên cụ thể                             | Đồng ý          | Sửa thành Học viên AI20K                        |
+| Quy trình có thể chỉ là giả định, chưa xác minh học viên có thực sự đọc đủ 5 file theo thứ tự đó | Đồng ý một phần | Theo dõi các học viên qua các bài Lab khác nhau |
 
 ---
 
