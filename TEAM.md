@@ -38,7 +38,33 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
 ### HoVaTen-MSSV
+### LeGiaHung-2A202603706
 
+**Phần việc phụ trách:**
+
+- CP3: pitch 3 Problem Card, tham gia tranh luận và phản biện để chọn candidate
+- CP4: assumption map, câu hỏi phỏng vấn theo Mom Test, research giải pháp đã có
+- CP5–CP6: đóng góp ý kiến
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Lúc đầu hỗ trợ mọi người làm rõ vấn đề: nên chọn problem như thế nào và ghi như thế nào
+- Pitch 3 candidate: tổng hợp thông tin để làm bài lab, tìm hiểu codebase mới, cập nhật tiến độ nhóm. Candidate "làm bài lab" được nhóm chọn; tôi trình bày rõ cách hiểu, ý kiến và khó khăn của mình về vấn đề này để nhóm có thêm góc nhìn
+- Phản biện: hỏi Hoàng (pitch thực đơn), Mạnh (pitch code AI generate), Hiếu (pitch báo cáo tiến độ)
+- CP4: viết assumption map 6 giả định, câu hỏi phỏng vấn theo Mom Test, bảng research 3 công cụ (NotebookLM, ChatGPT File Uploads, Adobe Acrobat AI Assistant) kèm kết luận
+- CP5–CP6: đóng góp ý kiến <!-- TODO: góp ý cụ thể gì, cho phần nào -->
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `report/team/group_report.md`: mục 2.1 (dòng pitch #1–#3), mục 3.1, 3.2, 3.3
+- `report/individual/2A202603706_LeGiaHung.md`
+- Commit: <!-- TODO: hash commit sau khi push -->
+
+**Điều mình học được từ phần nhóm:**
+
+- Cùng là bài toán tổng hợp thông tin nhưng mỗi người có góc nhìn khác: có người chỉ thấy đó là phần mềm tổng hợp thông tin, có người lại thấy đó là công cụ giúp intern và người mới vào dễ tiếp cận nền tảng, doanh nghiệp và môi trường làm việc
+- Vấn đề thật không nằm ở số lượng tài liệu mà ở việc thông tin cần thiết nằm rải rác ở nhiều nơi; không phải cứ dùng AI là giải quyết được
+  
 **Phần việc phụ trách:**
 
 -
