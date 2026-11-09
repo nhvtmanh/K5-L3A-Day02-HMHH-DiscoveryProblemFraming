@@ -4,7 +4,7 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: HMHH
 - Candidate problem nhóm chọn (1 câu):
 - Quyết định cuối (Go / Not Yet / No-Go):
 
@@ -12,7 +12,7 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
+| 1 | Lê Gia Hưng | 2A202603706 | Phụ trách kiểm chứng, phụ trách research | <!-- TODO: https://github.com/Hung-341 --> |
 | 2 | | | | |
 | 3 | | | | |
 | 4 | | | | |
@@ -25,9 +25,9 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
-| CP3 — Hội tụ nhóm | | | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
-| CP4 — Research | | | Bảng research có link |
+| CP3 — Hội tụ nhóm | | Lê Gia Hưng | Cluster, cây OST, bảng chấm điểm |
+| CP4 — Kiểm chứng | Lê Gia Hưng | | Assumption map, snapshot hoặc survey |
+| CP4 — Research | Lê Gia Hưng | | Bảng research có link |
 | CP5 — Quy trình trước/sau | | | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | | | Problem Statement v0 |
 | CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
