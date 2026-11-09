@@ -14,7 +14,7 @@
 |---:|---|---|---|---|
 | 1 | Lê Gia Hưng | 2A202603706 | Phụ trách kiểm chứng, phụ trách research | https://github.com/Hung-341|
 | 2 |Nguyễn Thế Hoàng |2A202603718 | Phụ trách phân tích và tổng hợp vấn đề | https://github.com/rollingthunder02|
-| 3 | | | | |
+| 3 | Nguyễn Cảnh Hiếu | 2A202603667 | Phụ trách quy trình trước/sau + Problem Statement v0 | https://github.com/canhhieu02 |
 | 4 | | | | |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
@@ -120,4 +120,31 @@ Tham gia tranh luận, phản biện và đóng góp ý kiến cho các phần C
 -Tôi hiểu rằng lựa chọn giải pháp cần dựa trên bằng chứng, tiêu chí đo lường và phạm vi triển khai cụ thể.
 
 -Qua tranh luận, tôi nhận ra cần so sánh với cách làm không dùng AI và xác định rõ phần AI hỗ trợ, phần con người phải kiểm tra.
+
+
+### NguyenCanhHieu-2A202603667
+
+**Phần việc phụ trách:**
+
+- CP3: Pitch 3 Problem Card, tham gia tranh luận và phản biện chéo để chọn candidate chung.
+- CP5: Đảm nhiệm chính việc vẽ quy trình trước/sau (hiện tại và tương lai), lập bảng before/after và viết Problem Statement v0.
+- Các CP khác (CP4, CP6): Lắng nghe, thảo luận, phân tích và đóng góp ý kiến tổng thể cho nhóm.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- CP3: Trình bày 3 bài toán (đặc thù frontend khi đổi API, check quy ước code, và báo cáo tiến độ). Tích cực đặt câu hỏi phản biện cho các pitch của thành viên khác. Sau đó chủ động nhượng bộ, gác lại candidate cá nhân khi nhận ra bài toán của mình có thể xử lý bằng rule cứng, đồng thuận chọn vấn đề "đọc tài liệu lab" để nhóm dễ kiểm chứng hơn.
+- CP5: Phân tích và sơ đồ hóa quy trình as-is (5 bước) của sinh viên khi nhận bài lab, ước tính thời gian đọc/đối chiếu để chỉ ra bottleneck giả thuyết. 
+- CP5: Phác thảo quy trình to-be, vạch rõ giới hạn (Boundary) cho AI là chỉ lập checklist có nguồn và gắn cờ mâu thuẫn, định hình bước Human-in-the-loop (con người bắt buộc kiểm tra). Viết hoàn thiện bảng Problem Statement v0 (Actor, Impact, Success Metric).
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `report/team/group_report.md`: mục 2.1 (các dòng pitch #10, #11, #12), toàn bộ mục 4 (4.1, 4.2, 4.3), và mục 5 (Problem Statement v0).
+- `report/individual/2A202603667_NguyenCanhHieu.md`
+- Commit: 'update cp5 group_report.md', 'bo sung cp7', 'update cp5 group_report.md'
+
+**Điều mình học được từ phần nhóm:**
+
+- Nhận diện rõ cái bẫy "solution-first": cả nhóm (kể cả bản thân) rất dễ nảy số ra giải pháp AI ngay lập tức thay vì đi sâu phân tích xem bottleneck thực sự nằm ở đâu trong quy trình.
+- Tầm quan trọng của số liệu thực tế: khi viết Problem Statement v0, tôi nhận ra nếu baseline thời gian chỉ là tự ước lượng thì bản báo cáo cực kỳ yếu. Việc phỏng vấn (Mom Test) và bấm giờ thực tế là bắt buộc chứ không phải làm cho có.
+- Kỹ năng làm việc nhóm: Học được cách gạt bỏ cái tôi, dám bỏ đi ý tưởng mình đã cất công chuẩn bị để lựa chọn bài toán chung mang lại góc nhìn thuyết phục và khả thi nhất cho cả team.
 
