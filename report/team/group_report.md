@@ -98,49 +98,80 @@ Kiểm kê, lên kế hoạch thực phẩm: Phạm vi còn rộng, đang gộp 
 
 ### 3.1. Assumption Map
 
-|   # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
-| --: | -------- | -------------------------------------------------- | ---------------: | ---------------------: | ----------------- |
-|   1 |          |                                                    |                  |                        |                   |
-|   2 |          |                                                    |                  |                        |                   |
-|   3 |          |                                                    |                  |                        |                   |
-|   4 |          |                                                    |                  |                        |                   |
-|   5 |          |                                                    |                  |                        |                   |
-|   6 |          |                                                    |                  |                        |                   |
+Với vấn đề tổng hợp thông tin để làm bài lab, tôi đưa ra các giả định sau:
 
-_Điền 4–6 giả định; xóa dòng thừa._
+| # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
+|---:|---|---|---:|---:|---|
+| 1 | Sinh viên cũng gặp khó khăn khi phải đọc nhiều file và quy định để làm bài lab | Value | 5 | 1 | Có |
+| 2 | Việc đọc và đối chiếu thông tin từ nhiều nguồn làm mất nhiều thời gian | Value | 5 | 1 | Có |
+| 3 | Việc đối chiếu yêu cầu giữa README, CHECKPOINTS và RUBRIC là bước gây khó khăn | Value | 4 | 1 | Có |
+| 4 | AI có thể đọc nhiều tài liệu và tổng hợp yêu cầu kèm nguồn tham khảo | Feasibility | 4 | 3 | Có |
+| 5 | Sinh viên được phép sử dụng AI với tài liệu của bài lab | Viability | 4 | 2 | Có |
+| 6 | Người dùng có thể dễ dàng đưa tài liệu vào và nhận được nội dung tổng hợp phù hợp | Usability | 3 | 2 | Không |
 
 Giả định nhóm kiểm chứng trong buổi này:
 
+Các giả định cần kiểm tra trước là vấn đề có thực sự xảy ra với sinh viên khác hay không, thời gian bị mất nằm ở bước nào và các hướng dẫn có sẵn trong đề lab đã giải quyết được vấn đề chưa.
+
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+Cách đã dùng: Phỏng vấn theo phương pháp Mom Test (dự kiến). Các câu hỏi tập trung vào trải nghiệm thực tế thay vì hỏi người được phỏng vấn có thích ý tưởng hay không.
+
+Một số câu hỏi dự kiến:
+
+- Lần gần nhất bạn làm bài lab có nhiều file hướng dẫn là khi nào?
+- Bạn đã đọc những file nào và đọc theo thứ tự nào?
+- Có lúc nào bạn phải quay lại README, CHECKPOINTS hoặc RUBRIC để kiểm tra thông tin không?
+- Phần nào khiến bạn mất nhiều thời gian nhất?
+- Bạn thường làm gì để tổng hợp các yêu cầu trước khi bắt đầu?
+- Bạn đã từng bỏ sót yêu cầu nào do có quá nhiều thông tin chưa?
 
 Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
 
-| Trường                                            | Nội dung |
-| ------------------------------------------------- | -------- |
-| Người được hỏi (vai trò, không ghi tên thật)      |          |
-| Câu nói đáng nhớ nhất (nguyên văn)                |          |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? |          |
-| Hiện đang xử lý bằng cách nào (workaround)?       |          |
-| Mất bao lâu, bao lần?                             |          |
-| Insight / opportunity rút ra                      |          |
+| Trường | Nội dung |
+|---|---|
+| Người được hỏi (vai trò, không ghi tên thật) | Chưa phỏng vấn |
+| Câu nói đáng nhớ nhất (nguyên văn) | Chưa có |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Chưa có dữ liệu |
+| Hiện đang xử lý bằng cách nào (workaround)? | Chưa có dữ liệu |
+| Mất bao lâu, bao lần? | Chưa có dữ liệu |
+| Insight / opportunity rút ra | Cần kiểm chứng thêm |
+
+Hiện tại tôi chưa có kết quả phỏng vấn thực tế nên chưa thể kết luận các giả định trên đúng hay sai.
 
 Tổng hợp:
 
-| Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
-| ----- | ----------------: | ----------------- | ----------------- |
-|       |                   |                   |                   |
+| Nguồn | Bằng chứng | Nhận xét |
+|---|---|---|
+| Trải nghiệm cá nhân | Ước tính khoảng 60 phút để đọc và tổng hợp tài liệu bài lab | Chưa phải số liệu đo thực tế |
+| README | Có hướng dẫn thứ tự đọc | Cần kiểm tra mức độ hữu ích |
+| CHECKPOINTS | Có phần tự kiểm tra cho từng CP | Cần kiểm tra xem đã đủ rõ chưa |
+| SUBMISSION | Có checklist trước khi nộp | Có thể hỗ trợ giảm việc bỏ sót yêu cầu |
+| Phỏng vấn | Chưa thực hiện | Chưa có dữ liệu từ người khác |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
 
+Chưa có đủ dữ liệu để xác nhận Problem Statement ban đầu. Tạm thời giữ vấn đề ở mức giả định:
+
+> Khi làm bài lab có nhiều file hướng dẫn, tôi muốn tổng hợp và đối chiếu các yêu cầu từ README, CHECKPOINTS và RUBRIC để hiểu rõ những việc cần làm và tránh bỏ sót yêu cầu.
+
+Cần kiểm tra thêm xem khó khăn chính nằm ở việc không biết thứ tự đọc, phải quay lại nhiều lần hay nội dung giữa các file chưa rõ ràng.
+
 ### 3.3. Research giải pháp đã có
 
+Tôi tìm hiểu một số công cụ hiện có có thể hỗ trợ đọc và tổng hợp tài liệu.
+
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
-| ------------------------ | ---- | ------------------------------ | --------- | --------------------- | ---------------- |
-|                          |      |                                |           |                       |                  |
-|                          |      |                                |           |                       |                  |
-|                          |      |                                |           |                       |                  |
+|---|---|---|---|---|---|
+| NotebookLM | https://notebooklm.google.com/ | Thêm tài liệu và đặt câu hỏi dựa trên nguồn đã cung cấp | Có thể tổng hợp và trả lời dựa trên tài liệu | Cần kiểm tra lại câu trả lời với tài liệu gốc | <!-- TODO --> |
+| ChatGPT | https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt | Tải file lên và yêu cầu đọc, so sánh hoặc tổng hợp | Dễ sử dụng, có thể xử lý nhiều dạng yêu cầu | Có thể hiểu sai hoặc bỏ sót yêu cầu | <!-- TODO --> |
+| Adobe Acrobat AI Assistant | https://helpx.adobe.com/acrobat/desktop/use-acrobat-ai/generative-ai-features/ai-get-answers.html | Đặt câu hỏi và tìm thông tin trong tài liệu PDF | Hữu ích khi đọc tài liệu PDF dài | Không tập trung riêng vào yêu cầu của bài lab | <!-- TODO --> |
+
+**Kết luận**
+
+Qua tìm hiểu, các công cụ hiện có đã hỗ trợ đọc và tổng hợp tài liệu. Vì vậy, việc chỉ tạo một công cụ tóm tắt nội dung có thể chưa tạo ra nhiều khác biệt.
+
+Nếu tiếp tục phát triển ý tưởng, tôi nghĩ cần tập trung vào việc tổng hợp yêu cầu riêng cho bài lab, đối chiếu thông tin giữa README, CHECKPOINTS và RUBRIC, đồng thời chỉ rõ nguồn của từng yêu cầu. Tuy nhiên, trước khi chọn giải pháp AI, tôi vẫn cần kiểm tra xem các hướng dẫn và checklist có sẵn đã đủ giải quyết vấn đề hay chưa.
 
 ---
 
