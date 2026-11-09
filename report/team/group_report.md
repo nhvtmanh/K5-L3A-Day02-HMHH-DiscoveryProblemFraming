@@ -145,59 +145,115 @@ Tổng hợp:
 ---
 
 ## 4. Quy trình trước/sau (CP5)
-
+ 
 ### 4.1. Quy trình hiện tại
-
+ 
+Candidate được dùng để vẽ quy trình: **đọc và đối chiếu nhiều tài liệu khi bắt đầu một bài lab** (gộp pitch #1 của Hưng và pitch #7 của Mạnh, cùng cluster A; problem đã chỉnh ở mục 3.2).
+ 
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
-
+ 
 ```text
-
+[1] Xác định có những file nào cần đọc            (cần đo)
+        |
+        v
+[2] Đọc lần lượt từng file                        (~60 phút/bài lab)
+        |
+        v
+[3] Đối chiếu đề bài / README / rubric            (~15 phút)  <== BOTTLENECK (giả thuyết)
+        |
+        v
+[4] Ghi lại danh sách việc cần làm, rule, tiêu chí (cần đo)
+        |
+        v
+[5] Làm bài, mở lại file gốc để kiểm tra khi cần  (nhiều lần, cần đo)
 ```
-
+ 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
-| ---: | ----- | ----- | ------ | -------------------- | ------- |
-|    1 |       |       |        |                      |         |
-|    2 |       |       |        |                      |         |
-|    3 |       |       |        |                      |         |
-|    4 |       |       |        |                      |         |
-|    5 |       |       |        |                      |         |
-
-**Bottleneck chính:**
-
+|---:|---|---|---|---|---|
+| 1 | Sinh viên | Repo / thư mục bài lab | Danh sách file cần đọc (đề bài, README, rule, rubric) | Cần đo | Chưa ai trong nhóm báo số phút cho bước này |
+| 2 | Sinh viên | Từng file riêng lẻ | Hiểu rời rạc về yêu cầu của từng file | ~60 phút mỗi bài lab | Nguồn: pitch #7 (Mạnh), 1 người tự báo |
+| 3 | Sinh viên | Hiểu biết từ nhiều file | Biết yêu cầu nào trùng, lệch hoặc thiếu giữa các nguồn | ~15 phút | Nguồn: pitch #1 (Hưng), 1 người tự báo. Chưa rõ có nằm trong 60 phút ở bước 2 hay không |
+| 4 | Sinh viên | Kết quả bước 3 | Danh sách việc cần làm, rule, tiêu chí chấm | Cần đo | Thường ghi tay hoặc nhớ trong đầu |
+| 5 | Sinh viên | Danh sách ở bước 4 + file gốc | Bài lab hoàn thành và nộp đủ | Mở lại file nhiều lần mỗi bài (pitch #1), chưa có số phút | Mở lại file gốc khi quên hoặc nghi ngờ yêu cầu |
+ 
+ 
+**Bottleneck chính:** Bước 3, đối chiếu yêu cầu giữa đề bài, README và rubric (~15 phút mỗi bài). Đây là giả thuyết làm việc, khớp với problem đã chỉnh ở mục 3.2, nhưng số liệu hiện có cho thấy bước 2 (đọc, ~60 phút) tốn nhiều thời gian hơn. Cần đo riêng từng bước trước khi chốt.
+ 
 ### 4.2. Quy trình tương lai
-
+ 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
-
+ 
 ```text
-
+[1] RULE   Gom đủ file (đề bài, README, rubric), gắn nhãn nguồn theo tên file + mục
+        |
+        v
+[2] AI     Trích việc cần làm, rule, tiêu chí rubric thành checklist
+           - mỗi dòng kèm nguồn (file + mục)
+           - gắn cờ dòng mâu thuẫn hoặc chưa rõ giữa các file
+        |
+        v
+[3] NGƯỜI  (HITL) Đối chiếu checklist với file gốc:
+           bắt buộc kiểm tra mọi dòng bị gắn cờ, mọi con số, hạn nộp, rule bắt buộc
+        |
+        +-- đạt ------------> [4] NGƯỜI  Làm bài theo checklist,
+        |                               mở file gốc qua nguồn khi nghi ngờ
+        |
+        +-- sai / thiếu / dòng không có nguồn
+                             -> [QUAY VỀ] Bỏ dòng đó, đọc trực tiếp file gốc
+                                          (như quy trình hiện tại)
 ```
-
+ 
+| Bước | Ai làm | Việc | Ghi chú |
+|---:|---|---|---|
+| 1 | Rule | Kiểm tra đủ các loại file, gắn nhãn nguồn | Không cần AI, chỉ là quy ước đặt tên và gom file |
+| 2 | AI | Tạo checklist có nguồn, gắn cờ mâu thuẫn | AI chỉ trích và phân loại, không quyết định |
+| 3 | Con người | Kiểm tra checklist với file gốc | Bước HITL bắt buộc, không được bỏ |
+| 4 | Con người | Làm bài theo checklist | Tra nguồn gốc khi nghi ngờ |
+ 
+**Boundary:** AI không được tự kết luận rule nào đúng khi các file mâu thuẫn (chỉ gắn cờ), không được thêm yêu cầu không có trong tài liệu, và không được đưa ra dòng nào thiếu nguồn. AI không làm bài thay sinh viên.
+ 
+**Phương án quay về:** Nếu một dòng sai, thiếu hoặc không có nguồn, bỏ dòng đó và đọc trực tiếp file gốc. Nếu checklist sai nhiều dòng quan trọng, bỏ cả checklist và quay về quy trình hiện tại (mục 4.1).
+ 
+**Điều kiện áp dụng:** Chỉ đưa tài liệu lab vào công cụ AI khi quy định môn học cho phép (giả định 6 ở mục 3.1 chưa kiểm chứng).
+ 
 ### 4.3. Before / after
-
-| Chỉ số               | Trước | Sau (kỳ vọng) | Ghi chú |
-| -------------------- | ----: | ------------: | ------- |
-| Số bước              |       |               |         |
-| Tổng thời gian       |       |               |         |
-| Số bước thủ công     |       |               |         |
-| Bottleneck chính     |       |               |         |
-| Rủi ro mới phát sinh |       |               |         |
+ 
+| Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
+|---|---:|---:|---|
+| Số bước | 5 | 4 | Bước 1 và 4 trước đây gộp lại thành checklist có sẵn |
+| Tổng thời gian | ~60–75 phút mỗi bài lab (cần đo lại) | ≤ 30 phút (mục tiêu đề xuất, chưa đo) | Trước: ~60 phút đọc (pitch #7) + ~15 phút đối chiếu (pitch #1), chưa rõ chồng lấn. Sau: gồm cả bước kiểm tra của con người |
+| Số bước thủ công | 5/5 | 2/4 | Còn lại bước kiểm tra checklist và làm bài |
+| Bottleneck chính | Bước 3, đối chiếu giữa các file (giả thuyết) | Bước 3, kiểm tra checklist có nguồn thay vì tự đối chiếu từ đầu | Cần pilot để biết bottleneck mới nằm ở đâu |
+| Rủi ro mới phát sinh | Không có | AI bỏ sót hoặc diễn giải sai rule; người dùng tin checklist mà không kiểm tra; đưa tài liệu lab lên công cụ AI có thể vi phạm quy định môn học | Giảm bằng bước HITL bắt buộc, nguồn trên từng dòng và điều kiện áp dụng |
+ 
+---
+ 
+## 5. Problem Statement v0 (CP5)
+ 
+| Trường | Nội dung |
+|---|---|
+| **Actor** | Sinh viên làm bài lab (4 thành viên nhóm là người dùng đầu tiên). Người liên quan: trợ giảng, người hướng dẫn bài lab. |
+| **Quy trình** | Bắt đầu một bài lab: xác định file cần đọc → đọc từng file → đối chiếu đề bài, README, rubric → ghi lại việc cần làm → làm bài và mở lại file gốc khi cần (5 bước, mục 4.1). |
+| **Bottleneck** | Bước 3, đối chiếu yêu cầu giữa đề bài, README và rubric, vì thông tin nằm rải rác ở nhiều file và phải tự tìm chỗ trùng, lệch, thiếu (~15 phút mỗi bài). Giả thuyết, bước 2 (đọc, ~60 phút) có thể lớn hơn, cần đo riêng. |
+| **Impact** | ~60–75 phút mỗi bài lab dành cho đọc và đối chiếu trước khi bắt đầu làm (tự báo của 2 thành viên). Nếu đối chiếu sai hoặc sót, sinh viên có thể bỏ sót yêu cầu, làm thiếu hoặc phải làm lại (chưa có số liệu). Số bài lab mỗi kỳ chưa đo. |
+| **Success Metric** (baseline → target, cách đo) | **Thời gian:** baseline ~60–75 phút mỗi bài lab (cần đo lại trên ít nhất 3 lần làm lab thật) → target ≤ 30 phút, tính cả bước kiểm tra của con người (đề xuất, nhóm xác nhận). **Chất lượng:** số yêu cầu bắt buộc bị bỏ sót sau khi kiểm tra = 0. **Cách đo:** bấm giờ từ lúc mở file đến lúc có checklist đã kiểm tra, trên cùng một bài lab, làm tay so với quy trình mới. Đếm bỏ sót bằng cách so với danh sách yêu cầu do người đối chiếu tay lập. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI **không được**: tự kết luận rule nào đúng khi các file mâu thuẫn (chỉ gắn cờ), thêm yêu cầu không có trong tài liệu, đưa dòng không kèm nguồn, hoặc làm bài thay sinh viên. **Con người bắt buộc kiểm tra** trước khi làm bài: mọi dòng bị gắn cờ, mọi con số, hạn nộp, rule bắt buộc. Chỉ dùng khi quy định môn học cho phép đưa tài liệu lên công cụ AI. |
+ 
+Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
+ 
+Các lỗ hổng dưới đây do AI chỉ ra, chưa viết lại v0. Cột cuối để nhóm tự điền sau khi thảo luận.
+ 
+| # | Lỗ hổng | Vì sao đáng lo | Nhóm đồng ý? |
+|---:|---|---|---|
+| 1 | Baseline chỉ là tự báo của 2 người, mỗi con số 1 nguồn, chưa có phỏng vấn CP4. | Đây là bằng chứng yếu, chưa phân biệt được "tôi thấy lâu" với "thực tế lâu". | Nhóm điền |
+| 2 | 60 phút (đọc) và 15 phút (đối chiếu) có thể chồng lấn, tổng 75 phút chưa chắc đúng. | Baseline sai thì target ≤ 30 phút không có ý nghĩa. | Nhóm điền |
+| 3 | Bottleneck chọn là đối chiếu (15 phút) nhưng bước đọc (60 phút) tốn nhiều hơn. | Nếu bước đọc mới là nghẽn thật, quy trình tương lai đang nhắm sai chỗ. | Nhóm điền |
+| 4 | Mục 1 và 2.4 chưa ghi candidate được chọn. Bản này dựa vào pitch #1, #7 và mục 3.2. | Problem Statement phải nối được với candidate đã chốt ở CP3. | Nhóm điền |
+| 5 | Target ≤ 30 phút là đề xuất, chưa có cơ sở. | Cần nhóm quyết định hoặc đo thử trước khi đưa vào v1. | Nhóm điền |
+| 6 | Phản biện của Hoàng ở pitch #1 (đưa hết file cho một AI khác) và kết quả research 3.3 cho thấy công cụ đọc và tóm tắt đã có sẵn. | Phần khác biệt của nhóm chỉ còn là checklist có nguồn và gắn cờ mâu thuẫn, cần nói rõ vì sao công cụ có sẵn chưa đủ. | Nhóm điền |
+| 7 | Giả định 6 (quy định môn học về việc đưa tài liệu lên AI) chưa kiểm chứng. | Nếu không được phép, toàn bộ bước 2 phải bỏ. | Nhóm điền |
 
 ---
-
-## 5. Problem Statement v0 (CP5)
-
-| Trường                                                                     | Nội dung |
-| -------------------------------------------------------------------------- | -------- |
-| **Actor**                                                                  |          |
-| **Quy trình**                                                              |          |
-| **Bottleneck**                                                             |          |
-| **Impact**                                                                 |          |
-| **Success Metric** (baseline → target, cách đo)                            |          |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) |          |
-
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
-
-- ***
 
 ## 6. Mức can thiệp AI (CP6)
 
