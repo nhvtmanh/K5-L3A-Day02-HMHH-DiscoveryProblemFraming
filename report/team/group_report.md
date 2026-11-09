@@ -292,66 +292,69 @@ Các lỗ hổng dưới đây do AI chỉ ra, chưa viết lại v0. Cột cu�
 
 Bài của nhóm nằm ở ô:
 
-Vì sao:
+- Độ mơ hồ thấp: đầu ra mong muốn tương đối rõ ràng, danh sách nhiệm vụ, rule, checkpoint và rubric phải đúng với tài liệu gốc. Không được tự thêm hoặc bỏ sót yêu cầu. Có thể kiểm chứng được bằng cách đối chiếu với nguồn.
+
+- Độ phức tạp cao: cần xử lý nhiều nguồn tài liệu (README, RULES, CHECKPOINTS, RUBRIC, SUBMISSION...), trích xuất thông tin, đối chiếu các yêu cầu liên quan và tổng hợp thành checklist có dẫn nguồn. Các bước phụ thuộc vào kết quả của nhau.
 
 ### 6.2. So sánh 4 mức
 
-| Mức                       | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
-| ------------------------- | -------------------------- | ---------- | ------ | ----- |
-| **No AI** (sửa quy trình) |                            |            |        |       |
-| **Rule**                  |                            |            |        |       |
-| **Workflow**              |                            |            |        |       |
-| **Agent**                 |                            |            |        |       |
-
-**Mức chọn:**
+| Mức                       | Phương án cho bài của nhóm                                                                                                   | Đủ khi nào                                                                        | Rủi ro                                                                                           | Chọn? |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ----- |
+| **No AI** (sửa quy trình) | Tạo một file checklist tổng hợp nhiệm vụ, rule, rubric và yêu cầu nộp bài                                                    | Tài liệu ít thay đổi, có người duy trì checklist chính xác                        | Phải cập nhật thủ công, checklist có thể lỗi thời hoặc thiếu yêu cầu nếu có sự thay đổi          | Không |
+| **Rule**                  | Dùng script đọc các file Markdown theo cấu trúc cố định, trích xuất heading, checkbox và các mục được đánh dấu               | Tài liệu có cấu trúc thống nhất, thông tin dễ nhận diện bằng quy tắc              | Khó xử lý các cách diễn đạt khác nhau, yêu cầu thường nằm rải rác hoặc mâu thuẫn giữa nhiều file | Không |
+| **Workflow**              | Gom tài liệu -> AI trích xuất nhiệm vụ, rule, rubric -> tạo checklist có dẫn nguồn -> học viên kiểm tra lại                  | Các bước xử lý xác định trước, AI chỉ hỗ trợ đọc hiểu và đối chiếu nội dung       | AI có thể bỏ sót hoặc giải thích sai yêu cầu, vẫn cần người kiểm tra kết quả                     | Chọn  |
+| **Agent**                 | AI tự tìm tài liệu, quyết định cần đọc file nào, sử dụng công cụ và lặp lại quá trình phân tích đến khi hoàn thành checklist | Nhiệm vụ phức tạp, không thể xác định trước các bước hoặc nguồn dữ liệu cần xử lý | Chi phí, độ trễ và độ phức tạp cao                                                               | Không |
 
 **Vì sao không chọn mức đơn giản hơn:**
 
+- No AI có thể giải quyết vấn đề bằng checklist thủ công nhưng cần người cập nhật khi tài liệu Lab thay đổi.
+- Rule phù hợp nếu tài liệu có cấu trúc cố định, hạn chế sự mâu thuẫn giữa các file nằm rải rác.
+
 ### 6.3. AI Canvas rút gọn
 
-| Thành phần                                                        | Nội dung |
-| ----------------------------------------------------------------- | -------- |
-| **Prediction** — AI dự đoán / tạo ra gì?                          |          |
-| **Judgment** — con người cân nhắc, quyết định gì?                 |          |
-| **Action** — hành động cuối cùng là gì, ai làm?                   |          |
-| **Outcome** — đo kết quả bằng gì?                                 |          |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? |          |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện?                   |          |
+| Thành phần                                                        | Nội dung                                                                                                                                                                               |
+| ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Prediction** — AI dự đoán / tạo ra gì?                          | AI đọc và trích xuất nhiệm vụ, rule, checkpoint, rubric và yêu cầu nộp bài từ nhiều tài liệu và tổng hợp thành checklist có dẫn nguồn và gắn cờ những thông tin mâu thuẫn hoặc chưa rõ |
+| **Judgment** — con người cân nhắc, quyết định gì?                 | Học viên đối chiếu checklist với tài liệu gốc, kiểm tra các yêu cầu bắt buộc, con số và deadline                                                                                       |
+| **Action** — hành động cuối cùng là gì, ai làm?                   | Học viên sử dụng checklist đã kiểm tra để thực hiện bài Lab, tra cứu tài liệu gốc khi cần và tự chịu trách nhiệm hoàn thành, nộp bài                                                   |
+| **Outcome** — đo kết quả bằng gì?                                 | Giảm thời gian đọc, đối chiếu và xem checklist từ khoảng 60 – 75 phút xuống dưới 30 phút/bài Lab và số yêu cầu bắt buộc bị bỏ sót sau kiểm tra = 0                                     |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Các file README.md, RULES.md, CHECKPOINTS.md, RUBRIC.md, SUBMISSION.md và đề bài Lab. Dữ liệu nằm trong repository, nhưng cần kiểm tra tính đầy đủ và quy định khi cho phép sử dụng AI |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện?                   | Thu thập những yêu cầu AI trích xuất sai hoặc bỏ sót, các mục học viên phải chỉnh sửa, thời gian hoàn thành checklist và phản hồi của học viên sau mỗi bài Lab                         |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
-
----
+- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Augment: AI chỉ hỗ trợ học viên đọc, trích xuất và tổng hợp các yêu cầu từ nhiều tài liệu thành checklist có dẫn nguồn. Học viên vẫn phải đối chiếu thông tin quan trọng với tài liệu gốc và tự quyết định sử dụng kết quả.
+- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Bỏ sót vì sao nếu học viên không check lại kỹ họ có thể không biết mình làm thiếu nội dung nào hoặc không biết bài mình nộp đã chắc chắn đúng format hay chưa.
+- Cách thiết kế xử lý: mỗi mục trong checklist phải có dẫn nguồn (file và mục tương ứng) để học viên có thể dễ dàng kiểm tra lại.
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
-| Trường                                          | Nội dung                        |
-| ----------------------------------------------- | ------------------------------- |
-| **Actor**                                       |                                 |
-| **Quy trình**                                   |                                 |
-| **Bottleneck**                                  |                                 |
-| **Impact**                                      |                                 |
-| **Success Metric** (baseline → target, cách đo) |                                 |
-| **Boundary**                                    |                                 |
-| **AI intervention point**                       |                                 |
-| **Mức chọn**                                    | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra**                     |                                 |
+| Trường                                          | Nội dung                                                                                                                                                                                                                                                                                              |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actor**                                       | Học viên thực hiện bài Lab                                                                                                                                                                                                                                                                            |
+| **Quy trình**                                   | 1. Xác định các tài liệu cần đọc 2. Đọc từng file 3. Đối chiếu yêu cầu giữa đề bài, README và rubric 4. Tổng hợp nhiệm vụ, rule và tiêu chí chấm điểm 5. Làm bài và tra cứu lại tài liệu khi cần                                                                                                      |
+| **Bottleneck**                                  | Bước 3: đối chiếu yêu cầu giữa nhiều tài liệu mất khoảng 15 phút/bài Lab. Tuy nhiên, bước 2 mất khoảng 60 phút, nên chưa xác định chắc chắn bước nào là bottleneck chính                                                                                                                              |
+| **Impact**                                      | Học viên mất khoảng 60–75 phút để đọc và đối chiếu tài liệu trước khi làm Lab. Có nguy cơ bỏ sót yêu cầu, làm thiếu hoặc phải làm lại                                                                                                                                                                 |
+| **Success Metric** (baseline → target, cách đo) | Baseline: khoảng 60 - 75 phút/bài Lab. Target: dưới 30 phút, không bỏ sót yêu cầu bắt buộc. Cách đo: Bấm giờ từ lúc bắt đầu đọc tài liệu đến khi có checklist đã kiểm tra sau đó so sánh quy trình thủ công và Workflow trên cùng một bài Lab                                                         |
+| **Boundary**                                    | AI không tự thêm yêu cầu, không tự quyết định khi các tài liệu mâu thuẫn, không đưa ra thông tin thiếu nguồn và không đưa ra đáp án hay làm bài thay học viên. Học viên bắt buộc kiểm tra các rule, con số, deadline và nội dung chưa rõ trước khi sử dụng. Chỉ dùng AI khi quy định môn học cho phép |
+| **AI intervention point**                       | Bước trích xuất và đối chiếu tài liệu: AI đọc các file, tổng hợp nhiệm vụ, rule, rubric thành checklist có dẫn nguồn và gắn cờ thông tin mâu thuẫn                                                                                                                                                    |
+| **Mức chọn**                                    | Workflow - Các bước xử lý được định nghĩa trước, AI hỗ trợ trích xuất và tổng hợp, con người kiểm tra và quyết định cuối cùng. Đây là mức chọn để thử nghiệm, chưa phải quyết định triển khai                                                                                                         |
+| **Rủi ro & người kiểm tra**                     | Rủi ro: AI bỏ sót nhiệm vụ, diễn giải sai rule, dẫn nguồn không chính xác hoặc không phát hiện mâu thuẫn. Người kiểm tra: Học viên đối chiếu checklist với tài liệu gốc. Nếu kết quả không đáng tin cậy, quay lại quy trình đọc tài liệu thủ công.                                                    |
 
 **Thay đổi so với v0 và lý do:**
 
-| Trường | v0  | v1  | Vì sao đổi |
-| ------ | --- | --- | ---------- |
-|        |     |     |            |
+| Trường     | v0                                                                                             | v1                                                                                         | Vì sao đổi                                                                      |
+| ---------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| Bottleneck | Chọn bước đối chiếu tài liệu (~15 phút) là bottleneck chính                                    | Giữ bước 3 là bottleneck giả thuyết, nhưng nhấn mạnh cần đo riêng bước đọc (~60 phút)      | Chưa có bằng chứng xác nhận bước đối chiếu gây mất nhiều thời gian hơn bước đọc |
+| Boundary   | AI không tự quyết định khi gặp rule mâu thuẫn, không thêm yêu cầu, không làm bài thay học viên | Giữ giới hạn, nhấn mạnh học viên phải kiểm tra kết quả và quay lại tài liệu gốc khi AI sai | Làm rõ trách nhiệm của con người và cách xử lý khi AI không đáng tin cậy        |
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
-|   # | Tiêu chí | Đạt khi | Không đạt khi |
-| --: | -------- | ------- | ------------- |
-|   1 |          |         |               |
-|   2 |          |         |               |
-|   3 |          |         |               |
+|   # | Tiêu chí                                   | Đạt khi                                                                                                                              | Không đạt khi                                                       |
+| --: | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+|   1 | Đầy đủ yêu cầu                             | Checklist chứa 100% nhiệm vụ, rule, checkpoint và yêu cầu nộp bài bắt buộc được xác định trong bộ tài liệu đối chiếu                 | Bỏ sót ít nhất một yêu cầu bắt buộc                                 |
+|   2 | Chính xác và có dẫn nguồn                  | Mọi mục trong checklist phản ánh đúng tài liệu gốc, có nguồn xác minh được (tên file và mục tương ứng), không tự tạo yêu cầu         | Có yêu cầu sai, tự suy diễn hoặc dẫn nguồn thiếu/chỉ sai vị trí     |
+|   3 | Phát hiện thông tin mâu thuẫn hoặc chưa rõ | AI gắn cờ đầy đủ các mâu thuẫn và điểm chưa rõ đã được xác định trong bộ tài liệu đánh giá và không được tự quyết định rule nào đúng | Bỏ sót mâu thuẫn đã biết hoặc tự đưa ra kết luận khi chưa có căn cứ |
 
 ---
 
@@ -359,26 +362,26 @@ Vì sao:
 
 ### 8.1. Bốn rủi ro
 
-| Rủi ro          | Câu hỏi                                                           | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
-| --------------- | ----------------------------------------------------------------- | ----------------------------------------------------- | ------------------ |
-| **Value**       | Người dùng có thật sự cần và sẽ dùng không?                       |                                                       |                    |
-| **Usability**   | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? |                                                       |                    |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không?                     |                                                       |                    |
-| **Viability**   | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành?     |                                                       |                    |
+| Rủi ro          | Câu hỏi                                                           | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng                                                                                                                                                                                      |
+| --------------- | ----------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Value**       | Người dùng có thật sự cần và sẽ dùng không?                       | Cao                                                   | Cần khảo sát thêm học viên các lớp khác                                                                                                                                                                 |
+| **Usability**   | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | Trung bình                                            | Checklist có dẫn nguồn giúp học viên đối chiếu thông tin. Tuy nhiên, chưa thử nghiệm thực tế để biết học viên có dễ sử dụng và phát hiện được lỗi của AI hay không                                      |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không?                     | Trung bình                                            | Các tài liệu Lab có sẵn trong repository. NotebookLM và ChatGPT đã có khả năng đọc, tổng hợp tài liệu. Tuy nhiên, chưa kiểm chứng độ chính xác khi trích xuất yêu cầu, phát hiện mâu thuẫn và dẫn nguồn |
+| **Viability**   | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành?     | Trung bình                                            | Có thể tận dụng công cụ AI sẵn có để giảm công sức phát triển. Tuy nhiên, chưa xác minh quy định cho phép đưa tài liệu Lab lên AI, chi phí sử dụng và người chịu trách nhiệm duy trì giải pháp          |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** Not Yet
 
-**Lý do:**
+**Lý do:** các công cụ như NotebookLM và ChatGPT đã hỗ trợ đọc và tổng hợp tài liệu. Nhóm hiện tại chưa chứng minh được rằng Workflow đề xuất hiệu quả hơn công cụ có sẵn.
 
-**Nếu Go — pilot nhỏ nhất:**
+**Nếu Go — pilot nhỏ nhất:** chưa áp dụng.
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
+**Nếu Not Yet — cần kiểm chứng gì trước:** cần test ChatGPT/NotebookLM và Workflow đề xuất trên cùng một bài Lab để so sánh thời gian và độ chính xác.
 
-**Nếu No-Go — nên làm gì thay AI:**
+**Nếu No-Go — nên làm gì thay AI:** chưa áp dụng.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+**Ngưỡng dừng:** nếu Workflow không giảm thời gian xuống ≤ 30 phút (bao gồm kiểm tra của con người), bỏ sót bất kỳ yêu cầu bắt buộc nào hoặc không hiệu quả hơn checklist thủ công, nhóm dừng hướng phát triển Workflow AI và quay về giải pháp checklist thủ công.
 
 ---
 
