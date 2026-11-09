@@ -5,8 +5,8 @@
 ## Thông tin nhóm
 
 - Tên nhóm: HMHH
-- Candidate problem nhóm chọn (1 câu):
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Candidate problem nhóm chọn (1 câu): Học viên mất nhiều thời gian tìm kiếm và đối chiếu thông tin nằm rải rác ở nhiều file trước khi làm bài lab.
+- Quyết định cuối (Go / Not Yet / No-Go): Not Yet
 
 ## Thành viên
 
