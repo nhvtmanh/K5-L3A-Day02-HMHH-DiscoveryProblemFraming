@@ -81,3 +81,43 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - Cùng là bài toán tổng hợp thông tin nhưng mỗi người có góc nhìn khác: có người chỉ thấy đó là phần mềm tổng hợp thông tin, có người lại thấy đó là công cụ giúp intern và người mới vào dễ tiếp cận nền tảng, doanh nghiệp và môi trường làm việc
 - Vấn đề thật không nằm ở số lượng tài liệu mà ở việc thông tin cần thiết nằm rải rác ở nhiều nơi; không phải cứ dùng AI là giải quyết được
+### NguyenTheHoang-2A202603718
+  
+**Phần việc phụ trách:**
+
+-Phụ trách thực hiện và hoàn thiện nội dung CP3.
+
+Tham gia tranh luận, phản biện và đóng góp ý kiến cho các phần CP4, CP5 và CP6.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+-Tổng hợp nội dung CP3, rà soát cách diễn đạt vấn đề để làm rõ người gặp vấn đề, bối cảnh, điểm nghẽn và kết quả mong muốn.
+
+-Tham gia phân nhóm các vấn đề thành những nhóm có điểm chung: tổng hợp tài liệu, báo cáo tiến độ, kiểm tra code, cập nhật thông tin và quản lý thực phẩm.
+
+-Đóng góp ý kiến khi so sánh ba candidate: tổng hợp tài liệu lab, báo cáo tiến độ nhóm và kiểm kê, lên kế hoạch thực phẩm; xem xét mức độ rõ ràng, khả năng đo hiệu quả và phạm vi phù hợp với bài lab.
+
+-Đưa ra lập luận lựa chọn tổng hợp tài liệu lab vì nhóm có trải nghiệm trực tiếp, dễ tiếp cận tài liệu và có thể thử nghiệm trên phạm vi nhỏ.
+
+-Góp ý thu hẹp giải pháp vào việc trích xuất yêu cầu, tạo checklist và dẫn nguồn; đánh dấu nội dung chưa rõ, không mở rộng sang giải bài hoặc nộp bài thay người học.
+
+-Đề xuất tiêu chí thử nghiệm: giảm thời gian xác định yêu cầu từ khoảng 15 phút xuống 5 phút, đồng thời kiểm tra số yêu cầu bắt buộc bị bỏ sót. Đây là mục tiêu đề xuất, chưa phải kết quả đã đo.
+
+-Tham gia xây dựng phần giải thích chuỗi problem → quy trình → metric → boundary → mức can thiệp AI → quyết định của nhóm.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+-Nội dung CP3 trong group_report.md.
+
+-Các bảng phân nhóm, chấm điểm candidate và phần giải thích lựa chọn tổng hợp tài liệu lab trong báo cáo nhóm.
+
+-Nội dung CP4–CP6 có các ý kiến được nhóm thống nhất đưa vào báo cáo. Bổ sung đường dẫn mục hoặc commit tương ứng sau khi đối chiếu bản lưu thực tế.
+
+**Điều mình học được từ phần nhóm:**
+
+-Tôi học được cách phân biệt mô tả hoạt động với vấn đề thực sự cần giải quyết.
+
+-Tôi hiểu rằng lựa chọn giải pháp cần dựa trên bằng chứng, tiêu chí đo lường và phạm vi triển khai cụ thể.
+
+-Qua tranh luận, tôi nhận ra cần so sánh với cách làm không dùng AI và xác định rõ phần AI hỗ trợ, phần con người phải kiểm tra.
+
