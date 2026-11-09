@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | Lê Gia Hưng | 2A202603706 | Phụ trách kiểm chứng, phụ trách research | https://github.com/Hung-341|
-| 2 | | | | |
+| 2 |Nguyễn Thế Hoàng |2A202603718 | Phụ trách phân tích và tổng hợp vấn đề | |
 | 3 | | | | |
 | 4 | | | | |
 
