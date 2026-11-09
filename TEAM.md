@@ -15,7 +15,7 @@
 | 1 | Lê Gia Hưng | 2A202603706 | Phụ trách kiểm chứng, phụ trách research | https://github.com/Hung-341|
 | 2 |Nguyễn Thế Hoàng |2A202603718 | Phụ trách phân tích và tổng hợp vấn đề | https://github.com/rollingthunder02|
 | 3 | Nguyễn Cảnh Hiếu | 2A202603667 | Phụ trách quy trình trước/sau + Problem Statement v0 | https://github.com/canhhieu02 |
-| 4 | | | | |
+| 4 | Nguyễn Hoàng Văn Tiến Mạnh | 2A202603717 | Phụ trách tổng hợp và checkpoint 6 | https://github.com/nhvtmanh |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
@@ -31,7 +31,7 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP5 — Quy trình trước/sau | | Nguyễn Thế Hoàng| Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | | | Problem Statement v0 |
 | CP6 — Mức can thiệp + Problem Statement v1 | |Nguyễn Thế Hoàng | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
+| CP6 — Quyết định | Mạnh | | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân
 
