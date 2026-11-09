@@ -276,13 +276,13 @@ Các lỗ hổng dưới đây do AI chỉ ra, chưa viết lại v0. Cột cu�
  
 | # | Lỗ hổng | Vì sao đáng lo | Nhóm đồng ý? |
 |---:|---|---|---|
-| 1 | Baseline chỉ là tự báo của 2 người, mỗi con số 1 nguồn, chưa có phỏng vấn CP4. | Đây là bằng chứng yếu, chưa phân biệt được "tôi thấy lâu" với "thực tế lâu". | Nhóm điền |
-| 2 | 60 phút (đọc) và 15 phút (đối chiếu) có thể chồng lấn, tổng 75 phút chưa chắc đúng. | Baseline sai thì target ≤ 30 phút không có ý nghĩa. | Nhóm điền |
-| 3 | Bottleneck chọn là đối chiếu (15 phút) nhưng bước đọc (60 phút) tốn nhiều hơn. | Nếu bước đọc mới là nghẽn thật, quy trình tương lai đang nhắm sai chỗ. | Nhóm điền |
-| 4 | Mục 1 và 2.4 chưa ghi candidate được chọn. Bản này dựa vào pitch #1, #7 và mục 3.2. | Problem Statement phải nối được với candidate đã chốt ở CP3. | Nhóm điền |
-| 5 | Target ≤ 30 phút là đề xuất, chưa có cơ sở. | Cần nhóm quyết định hoặc đo thử trước khi đưa vào v1. | Nhóm điền |
-| 6 | Phản biện của Hoàng ở pitch #1 (đưa hết file cho một AI khác) và kết quả research 3.3 cho thấy công cụ đọc và tóm tắt đã có sẵn. | Phần khác biệt của nhóm chỉ còn là checklist có nguồn và gắn cờ mâu thuẫn, cần nói rõ vì sao công cụ có sẵn chưa đủ. | Nhóm điền |
-| 7 | Giả định 6 (quy định môn học về việc đưa tài liệu lên AI) chưa kiểm chứng. | Nếu không được phép, toàn bộ bước 2 phải bỏ. | Nhóm điền |
+| 1 | Baseline chỉ là tự báo của 2 người, mỗi con số 1 nguồn, chưa có phỏng vấn CP4. | Đây là bằng chứng yếu, chưa phân biệt được "tôi thấy lâu" với "thực tế lâu". | **Đồng ý.** Mục 3.2 xác nhận chưa phỏng vấn, snapshot còn trống. Nhóm sẽ đo thật trên ít nhất 3 lần làm lab trước khi chốt baseline. |
+| 2 | 60 phút (đọc) và 15 phút (đối chiếu) có thể chồng lấn, tổng 75 phút chưa chắc đúng. | Baseline sai thì target ≤ 30 phút không có ý nghĩa. | **Đồng ý.** Mục 4.1 đã ghi chưa rõ hai con số có chồng lấn không. Nhóm sẽ bấm giờ riêng từng bước. |
+| 3 | Bottleneck chọn là đối chiếu (15 phút) nhưng bước đọc (60 phút) tốn nhiều hơn. | Nếu bước đọc mới là nghẽn thật, quy trình tương lai đang nhắm sai chỗ. | **Đồng ý một phần.** Số liệu hiện tại cho thấy bước đọc lớn hơn, nhưng checklist có nguồn có thể giảm cả đọc lẫn đối chiếu. Giữ "đối chiếu" là giả thuyết cho đến khi đo riêng từng bước. |
+| 4 | Mục 1 và 2.4 chưa ghi candidate được chọn. Bản này dựa vào pitch #1, #7 và mục 3.2. | Problem Statement phải nối được với candidate đã chốt ở CP3. | **Đồng ý.** Nhóm cần điền mục 1 và 2.4 (candidate gộp từ pitch #1 và #7, cluster A) để khớp với Problem Statement. |
+| 5 | Target ≤ 30 phút là đề xuất, chưa có cơ sở. | Cần nhóm quyết định hoặc đo thử trước khi đưa vào v1. | **Đồng ý một phần.** Giữ ≤ 30 phút làm target tạm để có hướng đo. Nhóm xác nhận lại sau khi có baseline thật và chạy thử quy trình mới một lần. |
+| 6 | Phản biện của Hoàng ở pitch #1 (đưa hết file cho một AI khác) và kết quả research 3.3 cho thấy công cụ đọc và tóm tắt đã có sẵn. | Phần khác biệt của nhóm chỉ còn là checklist có nguồn và gắn cờ mâu thuẫn, cần nói rõ vì sao công cụ có sẵn chưa đủ. | **Đồng ý một phần.** Mục 3.3 đã thừa nhận phần đọc và tóm tắt không phải điểm khác biệt. Nhưng nhóm chưa chứng minh được công cụ có sẵn không làm được checklist có nguồn, cần thử bằng cách đưa cùng một bộ file vào công cụ có sẵn để so sánh. |
+| 7 | Giả định 6 (quy định môn học về việc đưa tài liệu lên AI) chưa kiểm chứng. | Nếu không được phép, toàn bộ bước 2 phải bỏ. | **Đồng ý.** Mục 4.2 đã ghi đây là điều kiện áp dụng. Nhóm sẽ hỏi trợ giảng hoặc đọc quy định môn học trước khi pilot. |
 
 ---
 
