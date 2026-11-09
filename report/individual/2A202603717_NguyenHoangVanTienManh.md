@@ -181,31 +181,24 @@ thủ công số lượng còn thiếu
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-| Hoạt động                  | Tôi đã làm gì?         | Kết quả / ảnh hưởng tới bài nhóm |
-| -------------------------- | ---------------------- | -------------------------------- |
-| Pitch Problem Card         |                        |                                  |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt:    |                                  |
-| Nhận phản biện             | Câu hỏi tôi nhận được: | Tôi đã sửa gì:                   |
-| Gom cluster / cây OST      |                        |                                  |
-| Chọn candidate problem     |                        |                                  |
-| Kiểm chứng / research      |                        |                                  |
-| Quy trình nhóm             |                        |                                  |
-| Problem Statement          |                        |                                  |
-| Mức can thiệp AI           |                        |                                  |
-| Quyết định                 |                        |                                  |
+| Hoạt động                  | Tôi đã làm gì?                                                                                                                               | Kết quả / ảnh hưởng tới bài nhóm                                                                                                                         |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pitch Problem Card         | Pitch "Tổng hợp thông tin từ bài Lab", "Review code AI", "Kiểm tra nguyên liệu"                                                              | Trao đổi, góp ý và phản biện phần Pitch "Tổng hợp thông tin từ bài Lab"                                                                                  |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: dùng cách nào để xử lý tổng hợp thông tin từ nhiều file?                                                                 | Phân tích dùng Workflow để xử lí thông tin                                                                                                               |
+| Problem Statement          | Tham gia xác định Actor, quy trình hiện tại, bottleneck, impact, success metric và boundary cho bài toán tổng hợp thông tin từ tài liệu Lab  | Giúp nhóm làm rõ vấn đề, xác định bước đối chiếu tài liệu là bottleneck giả thuyết và đề xuất mục tiêu giảm thời gian từ 60 - 75 phút xuống dưới 30 phút |
+| Mức can thiệp AI           | Phân tích ma trận độ mơ hồ + độ phức tạp, so sánh No AI, Rule, Workflow và Agent, đề xuất Workflow có AI hỗ trợ và học viên kiểm tra kết quả | Giúp nhóm lựa chọn mức can thiệp phù hợp, tránh sử dụng Agent không cần thiết và xác định rõ trách nhiệm của AI và con người                             |
+| Quyết định                 | Đánh giá 4 rủi ro Value, Usability, Feasibility, Viability, đề xuất quyết định Not Yet                                                       | Giúp nhóm nhận ra cần thử nghiệm và so sánh với giải pháp không AI trước khi quyết định triển khai                                                       |
 
 ---
 
 ## 5. Dùng AI
 
-| Checkpoint                     | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
-| ------------------------------ | ---------------------- | ----------------- | -------------------------- | ----------------------------------- |
-| CP1 Scan                       |                        |                   |                            |                                     |
-| CP2 Problem Card               |                        |                   |                            |                                     |
-| CP4 Research                   |                        |                   |                            |                                     |
-| CP5 Quy trình                  |                        |                   |                            |                                     |
-| CP5–6 Problem Statement        |                        |                   |                            |                                     |
-| CP6 Mức can thiệp / quyết định |                        |                   |                            |                                     |
+| Checkpoint                     | Tôi dùng AI để làm gì?                       | AI hữu ích ở đâu?                                                | AI sai hoặc hời hợt ở đâu?                                       | Tôi sửa gì bằng nhận định của mình?                                           |
+| ------------------------------ | -------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| CP1 Scan                       | Gợi ý và phân tích các vấn đề thực tế        | Giúp mở rộng ý tưởng, xác định pain và actor                     | Một số vấn đề còn chung chung, thiếu bằng chứng                  | Chọn 3 vấn đề gần với trải nghiệm cá nhân                                     |
+| CP2 Problem Card               | Phản biện Problem Card theo góc nhìn PM      | Phát hiện actor chưa rõ, bottleneck và metric chưa cụ thể        | Một số nhận định dựa trên giả định, chưa có dữ liệu thực tế      | Điều chỉnh cách mô tả và xác định những giả định cần kiểm chứng               |
+| CP5–6 Problem Statement        | Phân tích và hoàn thiện Problem Statement v1 | Làm rõ bottleneck, success metric, boundary và tiêu chí đánh giá | AI có xu hướng đề xuất giải pháp khi vấn đề chưa được kiểm chứng | Giữ các số liệu chưa xác minh ở mức giả thuyết, bổ sung cách đo và kiểm chứng |
+| CP6 Mức can thiệp / quyết định | So sánh 4 mức AI và đánh giá 4 rủi ro        | Giúp lựa chọn Workflow và phân tích lý do Not Yet                | Chưa chứng minh Workflow tốt hơn giải pháp không AI              | Đề xuất thử checklist thủ công và phỏng vấn người dùng trước khi triển khai   |
 
 ---
 
@@ -215,20 +208,32 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Nhận ra vấn đề nào thực sự cần để giải quyết thay vì cần AI để giải quyết mọi vấn đề
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Khi thảo luận bài toán đọc nhiều tài liệu Lab, nhóm đã nghĩ đến dùng AI tổng hợp. Có thành viên phản biện rằng chỉ cần đưa các file vào công cụ AI có sẵn hoặc làm checklist thủ công.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Khi phân tích sâu hơn, nhóm nhận ra bước đối chiếu tài liệu khoảng 15 phút cũng là bottleneck giả thuyết.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Research cho thấy NotebookLM và ChatGPT đã hỗ trợ đọc và tổng hợp tài liệu. Điều đáng suy nghĩ là nhóm chưa chứng minh được cần xây công cụ riêng.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Phân biệt vấn đề với giải pháp, xác định đúng bottleneck và xây dựng metric đo được. Ví dụ, baseline 60 – 75 phút chưa chắc chính xác vì thời gian đọc và đối chiếu có thể chồng lấn.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+
+Cân nhắc việc đo thời gian từng bước sớm hơn, phỏng vấn học viên ngoài nhóm, thử checklist thủ công trước.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi _problem → quy trình → metric → boundary → mức can thiệp AI → quyết định_ của bài nhóm mình.
 
----
-
-## 7. Tài liệu tham khảo
-
--
+1. Problem: chọn vấn đề học viên mất nhiều thời gian đọc và đối chiếu các tài liệu Lab để xác định đầy đủ yêu cầu cần thực hiện.
+2. Quy trình: học viên phải tìm các file, đọc từng tài liệu, đối chiếu yêu cầu, tổng hợp nhiệm vụ và tra cứu lại khi làm bài.
+3. Metric: đặt mục tiêu giảm thời gian đọc và tổng hợp từ khoảng 60–75 phút xuống dưới 30 phút, đồng thời không bỏ sót yêu cầu bắt buộc.
+4. Boundary và mức can thiệp AI: đề xuất Workflow sử dụng AI để trích xuất và tổng hợp checklist có dẫn nguồn, nhưng học viên vẫn phải kiểm tra kết quả và quyết định cuối cùng.
+5. Quyết định: chọn Not Yet vì chưa đủ bằng chứng từ người dùng thực tế và cần kiểm chứng xem AI có hiệu quả hơn checklist thủ công hoặc công cụ có sẵn hay không.
